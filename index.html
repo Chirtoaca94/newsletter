@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Newsletter</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<main>
+			<figure>
+				<img src="/images/illustration-sign-up-mobile.svg" alt="" />
+			</figure>
+			<article>
+				<h1>Stay updated!</h1>
+				<p>Join 60,000+ product managers receiving monthly updates on:</p>
+				<ul>
+					<li>
+						<div class="round">
+							<input type="checkbox" name="" id="first-checkbox" checked />
+							<span class="redCheckbox"></span>
+							<label for="first-checkbox">
+								Product discovery and building what matters
+							</label>
+						</div>
+					</li>
+					<li>
+						<div class="round">
+							<input type="checkbox" name="" id="checkbox" checked />
+							<span class="redCheckbox"></span>
+							<label for="checkbox">
+								Measuring to ensure updates are a success
+							</label>
+						</div>
+					</li>
+					<li>
+						<div class="round">
+							<input type="checkbox" name="" id="last-checkbox" checked />
+							<span class="redCheckbox"></span>
+							<label for="last-checkbox"> And much more! </label>
+						</div>
+					</li>
+				</ul>
+				<form action="">
+					<label for="email" id="email-label">Email address</label>
+					<input
+						type="email"
+						name="email"
+						id="email"
+						placeholder="email@company.com"
+						required
+					/>
+					<button type="submit" id="submit">
+						Subscribe to monthly newsletter
+					</button>
+				</form>
+				<div class="success hidden">
+					<div class="round success-container">
+						<input type="checkbox" name="checkbox" id="checkbox" />
+						<span class="redCheckbox"></span>
+					</div>
+					<h1>Thanks for subscribing!</h1>
+					<p></p>
+					<button class="dismiss">Dismiss message</button>
+				</div>
+			</article>
+		</main>
+	</body>
+</html>
