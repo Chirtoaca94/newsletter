@@ -70,6 +70,10 @@ ul li input {
 	align-self: flex-start;
 }
 
+form {
+	position: relative;
+}
+
 #email,
 #submit {
 	display: block;
@@ -87,6 +91,14 @@ ul li input {
 
 #email {
 	border: 1px solid var(--Grey);
+	color: var(--Charcoal);
+	cursor: pointer;
+	border-radius: 10px;
+	font-size: 1rem;
+}
+
+#email:focus {
+	border: 1px solid var(--Dark-Grey);
 }
 
 #submit {
@@ -95,6 +107,27 @@ ul li input {
 	color: white;
 	border: none;
 	margin-top: 1rem;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+#submit:hover {
+	background: linear-gradient(180deg, #ff6a3a 0%, #ff527b 100%);
+	box-shadow: 0px 5px 15px -2px #ff6a3a;
+}
+
+#submit:active {
+	background: linear-gradient(180deg, #ff6a3a 0%, #ff527b 100%);
+	translate: 2px 2px;
+}
+
+.error {
+	font-size: 0.75rem;
+	font-weight: 700;
+	color: #ff6155;
+	position: absolute;
+	right: 1rem;
+	top: 2px;
 }
 
 .round {
@@ -108,6 +141,7 @@ ul li input {
 
 .round input {
 	position: absolute;
+	appearance: none;
 	opacity: 0;
 	cursor: pointer;
 	height: 0;
@@ -140,7 +174,8 @@ ul li input {
 }
 
 .round label {
-	margin-left: 0.5rem;
+	margin-left: 0.2rem;
+	text-indent: 0.5rem;
 }
 
 form {
@@ -155,21 +190,43 @@ main {
 
 .success {
 	position: absolute;
-	top: 150px;
-	left: 30px;
+	top: 0;
+	left: 0;
 	right: 0;
 	bottom: 0;
 	background-color: white;
+	animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.success-container {
+	margin-top: 10rem;
+	margin-left: 2rem;
 }
 
 .success h1 {
 	width: 70%;
+	margin-top: 3rem;
+	margin-left: 1.5rem;
+}
+
+.success p {
+	margin-top: 1rem;
+	margin-left: 2rem;
+	max-width: 70%;
+	line-height: 1.5;
 }
 
 .success-container .redCheckbox {
 	transform: scale(2);
-	top: -60px;
-	left: 10px;
 }
 
 .dismiss {
@@ -187,6 +244,17 @@ main {
 	bottom: 30px;
 	left: 30px;
 	right: 30px;
+	cursor: pointer;
+}
+
+.dismiss:hover {
+	background: linear-gradient(180deg, #ff6a3a 0%, #ff527b 100%);
+	box-shadow: 0px 5px 15px -2px #ff6a3a;
+}
+
+.dismiss:active {
+	background: linear-gradient(180deg, #ff6a3a 0%, #ff527b 100%);
+	translate: 2px 2px;
 }
 
 .hidden {
