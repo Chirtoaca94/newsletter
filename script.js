@@ -31,5 +31,8 @@ let dismissMessageButton = document.querySelector(".dismiss");
 
 dismissMessageButton.addEventListener("click", function () {
 	emailInput.value = "";
+	emailInput.style.color = "var(--Dark-Grey)";
+	emailInput.style.border = "1px solid var(--Dark-Grey)";
+	emailInput.style.backgroundColor = "#ffffff";
 	successMessage.classList.add("hidden");
 });
